@@ -57,32 +57,27 @@ export default function Transaction(props) {
 
   return (
     <div className="mb-3 position-relative">
-      <ul>
-        <li
-          className="list-group-item d-flex justify-content-between align-item-center list-group-item-light"
-          style={{ fontWeight: "bold" }}
-        >
-          {(props.remark ? props.category + ": " : "") + props.merchant}
-          <div>
-            <Badge
-              pill
-              variant={props.type === "Expense" ? "danger" : "primary"}
-            >
-              ${props.amount}
-            </Badge>{" "}
-            {props.refreshPage !== undefined ? (
-              <TiDelete size="1.5em" onClick={deleteTransaction} />
-            ) : null}
-          </div>
-        </li>
-        <li
-          className="list-group-item d-flex justify-content-between align-item-center list-group-item-light"
-          style={{ fontSize: "15px" }}
-        >
-          {props.remark ? props.remark : props.category}
-          <div style={{ fontStyle: "italic" }}>{parseDate(props.date)}</div>
-        </li>
-      </ul>
+      <li
+        className="list-group-item d-flex justify-content-between align-item-center list-group-item-light"
+        style={{ fontWeight: "bold" }}
+      >
+        {(props.remark ? props.category + ": " : "") + props.merchant}
+        <div>
+          <Badge pill variant={props.type === "Expense" ? "danger" : "primary"}>
+            ${props.amount}
+          </Badge>{" "}
+          {props.refreshPage !== undefined ? (
+            <TiDelete size="1.5em" onClick={deleteTransaction} />
+          ) : null}
+        </div>
+      </li>
+      <li
+        className="list-group-item d-flex justify-content-between align-item-center list-group-item-light"
+        style={{ fontSize: "15px" }}
+      >
+        {props.remark ? props.remark : props.category}
+        <div style={{ fontStyle: "italic" }}>{parseDate(props.date)}</div>
+      </li>
     </div>
   );
 }
