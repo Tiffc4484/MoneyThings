@@ -59,6 +59,7 @@ export default function BudgetModule(props) {
           width: "100%",
           overflowY: "auto",
         }}
+        tabIndex="0"
       >
         <BarPanel barData={barData} />
       </div>

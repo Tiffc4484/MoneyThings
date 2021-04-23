@@ -19,6 +19,7 @@ export default function RecentModule(props) {
             width: "100%",
             overflowY: "auto",
           }}
+          tabIndex="0"
         >
           <div>
             {props.recent.slice(0, 10).map((i, index) => (
