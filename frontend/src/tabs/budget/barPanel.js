@@ -28,6 +28,7 @@ export default function BarPanel(props) {
           >
             {item.category}
             <ProgressBar
+              valuetext="ProgessBar"
               now={item.amount.toFixed(2)}
               variant={getVariant(item.ratio)}
               label={`${item.ratio}%`}
