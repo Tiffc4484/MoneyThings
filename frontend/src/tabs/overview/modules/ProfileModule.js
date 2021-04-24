@@ -24,11 +24,8 @@ export default function ProfileModule(props) {
 
   return (
     <div className="flex-container border d-flex flex-column">
-      <div
-        className="overview-item border-bottom py-2 px-3 fw-bold text-black-50"
-        style={{ color: "#333" }}
-      >
-        <p>Profile</p>
+      <div className="overview-item border-bottom py-2 px-3 fw-bold text-black">
+        Profile
       </div>
       <div className="d-flex flex-grow-1">
         <div className="row mx-3 align-self-center">

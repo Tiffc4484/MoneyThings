@@ -49,9 +49,7 @@ export default function BudgetModule(props) {
 
   return (
     <div className="flex-container border d-flex flex-column">
-      <div className="border-bottom py-2 px-3 fw-bold text-black-50">
-        Budget
-      </div>
+      <div className="border-bottom py-2 px-3 fw-bold text-black">Budget</div>
       <div
         className="row mt-4 mx-3 align-self-center hide-scroll"
         style={{

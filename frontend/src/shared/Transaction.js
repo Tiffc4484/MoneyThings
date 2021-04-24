@@ -59,15 +59,20 @@ export default function Transaction(props) {
     <div className="mb-3 position-relative">
       <ul>
         <li
-          className="list-group-item d-flex justify-content-between align-item-center list-group-item-light"
+          className="list-group-item d-flex justify-content-between align-item-center list-group-item"
           style={{ fontWeight: "bold" }}
         >
           {(props.remark ? props.category + ": " : "") + props.merchant}
           <div>
-            <Badge
-              pill
-              variant={props.type === "Expense" ? "danger" : "primary"}
-            >
+            <style type="text/css">
+              {`
+                .badge-flat {
+                  background-color: blue;
+                  color: white;
+                }
+              `}
+            </style>
+            <Badge pill variant={props.type === "Expense" ? "danger" : "flat"}>
               ${props.amount}
             </Badge>{" "}
             {props.refreshPage !== undefined ? (
@@ -76,7 +81,7 @@ export default function Transaction(props) {
           </div>
         </li>
         <li
-          className="list-group-item d-flex justify-content-between align-item-center list-group-item-light"
+          className="list-group-item d-flex justify-content-between align-item-center list-group-item"
           style={{ fontSize: "15px" }}
         >
           {props.remark ? props.remark : props.category}
