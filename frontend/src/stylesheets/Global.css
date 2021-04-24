@@ -3,7 +3,7 @@ nav {
 }
 
 .nav-item {
-	color: rgba(153, 153, 153, 1);
+	color: #333;
 }
 
 .functional-navbar {
@@ -38,8 +38,4 @@ a:hover {
 	text-decoration: none;
 
 	border-bottom: 3px solid #ccc;
-}
-
-.instruction-icon {
-	color: #ffec67;
 }

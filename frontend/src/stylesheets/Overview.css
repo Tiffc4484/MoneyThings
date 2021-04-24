@@ -1,6 +1,3 @@
-body {
-}
-
 .module {
 	height: 50%;
 }
@@ -29,4 +26,8 @@ body {
 .instruction-icon:hover {
 	color: white;
 	cursor: pointer;
+}
+
+.overview-item p {
+	color: #333;
 }

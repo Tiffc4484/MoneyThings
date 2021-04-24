@@ -150,7 +150,7 @@ function FunctionalNavbar() {
     <div className="d-flex justify-content-center py-3 functional-navbar">
       <div className="container row position-relative">
         <NavLink
-          className="col-3 text-center fw-bold"
+          className="col-3 text-center fw-bold navlink"
           to="/overview"
           activeClassName="active-link"
         >
