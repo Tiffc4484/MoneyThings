@@ -24,11 +24,7 @@ export default function NavigationComponent(props) {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark px-3">
       <div className="container-fluid d-flex">
-        <Link
-          className="navbar-brand"
-          to="/"
-          style={{ color: "rgba(255,255,255,0.9)" }}
-        >
+        <Link className="navbar-brand" to="/">
           <img
             src={"../images/MoneyEmoji.png"}
             alt="logo"
@@ -36,7 +32,7 @@ export default function NavigationComponent(props) {
             height="24"
             className="d-inline-block align-text-top me-2"
           />
-          MoneyThings
+          <h1>MoneyThings</h1>
         </Link>
         {!props.user ? (
           <div className="nav-link" style={{ color: "rgba(255,255,255,1)" }}>
@@ -59,6 +55,7 @@ export default function NavigationComponent(props) {
                 >
                   Welcome, {props.user.username}
                 </div>
+
                 <div>
                   <img
                     src={avatar}
