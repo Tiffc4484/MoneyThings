@@ -29,11 +29,11 @@ export default function NavigationComponent(props) {
             <img
               src={"../images/MoneyEmoji.png"}
               alt="logo"
-              width="60"
-              height="48"
+              width="50"
+              height="40"
               className="d-inline-block align-text-top me-2"
             />
-            <h1>MoneyThings</h1>
+            MoneyThings
           </div>
         </Link>
         {!props.user ? (

@@ -3,7 +3,7 @@ import "../../stylesheets/SelectionPanel.css";
 import NewTransaction from "./NewTransaction";
 import RecentTransaction from "./RecentTransaction";
 import propTypes from "prop-types";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function SelectionPanel(props) {
   const [showNewTrans, setShowNewTrans] = useState(false);
@@ -16,7 +16,11 @@ export default function SelectionPanel(props) {
     <div className="border-end flex-container d-flex flex-column">
       <div
         className="text-center border-bottom py-3 position-relative"
-        style={{ fontSize: "20px", fontWeight: "bold" }}
+        style={{
+          fontSize: "20px",
+          fontWeight: "bold",
+          backgroundColor: "rgba(255,236,103, 0.3)",
+        }}
       >
         Recent Transactions
         {showNewTrans ? null : (
@@ -24,7 +28,7 @@ export default function SelectionPanel(props) {
             className="position-absolute top-50 translate-middle-y new-btn"
             onClick={toggleSelectionPanelContent}
           >
-            <FontAwesomeIcon icon={["fas", "plus"]} />
+            <i className="fas fa-plus-square"></i>
           </div>
         )}
       </div>

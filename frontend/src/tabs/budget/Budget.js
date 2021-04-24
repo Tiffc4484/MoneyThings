@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import propTypes from "prop-types";
-
 import SetBudget from "./SetBudget.js";
 import BarPanel from "./barPanel.js";
 
@@ -53,14 +52,21 @@ export default function Budget(props) {
         <div>
           <BarPanel barData={barData} />
         </div>
-        <div className="text-center border-bottom py-3 position-relative">
+        <div
+          className="text-center border-bottom py-3 position-relative"
+          style={{
+            backgroundColor: "rgba(255,236,103, 0.3)",
+            fontSize: "20px",
+            fontWeight: "bold",
+          }}
+        >
           Add Expense Budget
           {showBudgetPanel ? null : (
             <div
               className="position-absolute top-50 translate-middle-y new-btn"
               onClick={toggleBudgetPanel}
             >
-              <i className="fas fa-plus fa-2x" />
+              <i className="fas fa-plus-square"></i>
             </div>
           )}
         </div>

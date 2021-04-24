@@ -15,10 +15,6 @@
 	background-color: rgb(250, 252, 252);
 }
 
-.border-bottom.py-2.px-3 {
-	background-color: rgba(189, 191, 191, 0.1);
-}
-
 .instruction-icon {
 	color: #ffec67;
 }
@@ -29,5 +25,5 @@
 }
 
 .overview-item {
-	color: #333;
+	background-color: rgba(189, 204, 148, 0.2);
 }
