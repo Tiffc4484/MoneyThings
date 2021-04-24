@@ -49,7 +49,7 @@ export default function BudgetModule(props) {
 
   return (
     <div className="flex-container border d-flex flex-column">
-      <div className="border-bottom py-2 px-3 fw-bold text-black-50">
+      <div className="overview-item border-bottom py-2 px-3 fw-bold text-black">
         Budget
       </div>
       <div
@@ -59,6 +59,7 @@ export default function BudgetModule(props) {
           width: "100%",
           overflowY: "auto",
         }}
+        tabIndex="0"
       >
         <BarPanel barData={barData} />
       </div>

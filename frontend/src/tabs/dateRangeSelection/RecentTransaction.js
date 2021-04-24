@@ -31,8 +31,16 @@ export default function RecentTransaction(props) {
     return (
       <div>
         <ButtonGroup>
+          <style type="text/css">
+            {`
+                .btn-flat {
+                  background-color: #ffec67;
+                  color: #333;
+                }
+              `}
+          </style>
           <Button
-            variant="info"
+            variant="flat"
             onClick={() => {
               props.setDateRange(getToday());
             }}
@@ -40,7 +48,7 @@ export default function RecentTransaction(props) {
             Today
           </Button>
           <Button
-            variant="info"
+            variant="flat"
             onClick={() => {
               props.setDateRange(getLastWeek());
             }}
@@ -48,7 +56,7 @@ export default function RecentTransaction(props) {
             Last Week
           </Button>
           <Button
-            variant="info"
+            variant="flat"
             onClick={() => {
               props.setDateRange(getLastMonth());
             }}
@@ -56,7 +64,7 @@ export default function RecentTransaction(props) {
             Last Month
           </Button>
           <Button
-            variant="info"
+            variant="flat"
             onClick={() => {
               props.setDateRange(getLastYear());
             }}
@@ -118,22 +126,20 @@ export default function RecentTransaction(props) {
       </div>
       <div className="flex-grow-1 d-flex flex-column">
         <div className="my-3 mx-2 text-center flex-grow-1">
-          <ul className="flex-container list-group list-group-flush d-flex justify-content-evenly">
-            {props.recent.slice(page * 4 - 4, page * 4).map((i, index) => (
-              <Transaction
-                key={"RecentTransaction-" + index}
-                _id={i._id}
-                category={i.category}
-                amount={parseFloat(i.amount)}
-                date={i.date}
-                merchant={i.merchant}
-                type={i.type}
-                recent={props.recent}
-                setRecent={props.setRecent}
-                refreshPage={props.refreshPage}
-              />
-            ))}
-          </ul>
+          {props.recent.slice(page * 4 - 4, page * 4).map((i, index) => (
+            <Transaction
+              key={"RecentTransaction-" + index}
+              _id={i._id}
+              category={i.category}
+              amount={parseFloat(i.amount)}
+              date={i.date}
+              merchant={i.merchant}
+              type={i.type}
+              recent={props.recent}
+              setRecent={props.setRecent}
+              refreshPage={props.refreshPage}
+            />
+          ))}
         </div>
         <div
           className="row btn-group d-flex justify-content-center mb-5 mt-3 mx-2"

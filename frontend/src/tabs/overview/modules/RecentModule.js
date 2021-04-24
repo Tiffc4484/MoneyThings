@@ -8,7 +8,7 @@ export default function RecentModule(props) {
       className="flex-container border d-flex flex-column"
       style={{ overflowX: "hidden" }}
     >
-      <div className="border-bottom py-2 px-3  fw-bold text-black-50">
+      <div className="overview-item border-bottom py-2 px-3  fw-bold text-black">
         Recent
       </div>
       <div className="d-flex flex-grow-1" style={{ width: "100%" }}>
@@ -19,6 +19,7 @@ export default function RecentModule(props) {
             width: "100%",
             overflowY: "auto",
           }}
+          tabIndex="0"
         >
           <div>
             {props.recent.slice(0, 10).map((i, index) => (

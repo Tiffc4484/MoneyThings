@@ -1,24 +1,45 @@
 nav {
-  background-color: #2e4874;
+	background-color: rgb(51, 51, 51);
+}
+
+.nav-item {
+	color: #333;
 }
 
 .functional-navbar {
-  background-color: #869bb5;
+	background-color: rgba(149, 153, 138, 0.5);
 }
 
 body {
-  background-color: #f0f3f7;
+	background-color: #f0f3f7;
 }
 
 a {
-  color: rgba(255,255,255,0.7);
+	color: rgba(255, 255, 255, 0.7);
 }
 
 a:hover {
-  color: rgba(255,255,255,0.9);
+	color: rgba(255, 255, 255, 0.9);
 }
 
 .active-link {
-  color: rgba(255,255,255,1);
-  text-decoration: underline;
+	color: rgba(255, 255, 255, 1);
+	text-decoration: none;
+	border-bottom: 3px solid #ffec67;
+	padding-bottom: 15px;
+}
+
+.functional-navbar a {
+	color: #333;
+}
+
+.functional-navbar a:hover {
+	color: #999;
+	text-decoration: none;
+
+	border-bottom: 3px solid #ccc;
+}
+
+.new-btn {
+	cursor: pointer;
 }

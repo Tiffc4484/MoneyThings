@@ -24,7 +24,7 @@ export default function ProfileModule(props) {
 
   return (
     <div className="flex-container border d-flex flex-column">
-      <div className="border-bottom py-2 px-3 fw-bold text-black-50">
+      <div className="overview-item border-bottom py-2 px-3 fw-bold text-black">
         Profile
       </div>
       <div className="d-flex flex-grow-1">
@@ -38,10 +38,10 @@ export default function ProfileModule(props) {
             </div>
           </div>
           <div className="col-8 align-self-center">
-            <h3 className="mb-3">
+            <h2 className="mb-3">
               Good {getTime()}, {props.user.username}
-            </h3>
-            <h5 className="d-flex me-4">
+            </h2>
+            <h3 className="d-flex me-4">
               Your Balance:{" "}
               {balanceVisibility
                 ? parseFloat(props.user.balance).toFixed(2)
@@ -53,10 +53,10 @@ export default function ProfileModule(props) {
                   <FontAwesomeIcon icon={["far", "eye"]} />
                 )}
               </span>
-            </h5>
+            </h3>
           </div>
           <div className="fw-lighter mb-1 mt-4">Biography</div>
-          <h5 className="fst-italic">{props.user.biography}</h5>
+          <h4 className="fst-italic">{props.user.biography}</h4>
         </div>
       </div>
     </div>

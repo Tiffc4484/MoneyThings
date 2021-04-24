@@ -24,19 +24,17 @@ export default function NavigationComponent(props) {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark px-3">
       <div className="container-fluid d-flex">
-        <Link
-          className="navbar-brand"
-          to="/"
-          style={{ color: "rgba(255,255,255,0.9)" }}
-        >
-          <img
-            src={"../images/MoneyEmoji.png"}
-            alt="logo"
-            width="30"
-            height="24"
-            className="d-inline-block align-text-top me-2"
-          />
-          MoneyThings
+        <Link className="navbar-brand" to="/">
+          <div className="d-flex">
+            <img
+              src={"../images/MoneyEmoji.png"}
+              alt="logo"
+              width="50"
+              height="40"
+              className="d-inline-block align-text-top me-2"
+            />
+            MoneyThings
+          </div>
         </Link>
         {!props.user ? (
           <div className="nav-link" style={{ color: "rgba(255,255,255,1)" }}>
@@ -55,10 +53,11 @@ export default function NavigationComponent(props) {
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                  style={{ color: "rgba(255,255,255,0.8)" }}
+                  style={{ color: "rgba(255,255,255, 0.8)" }}
                 >
                   Welcome, {props.user.username}
                 </div>
+
                 <div>
                   <img
                     src={avatar}

@@ -148,30 +148,30 @@ Workspace.propTypes = {
 function FunctionalNavbar() {
   return (
     <div className="d-flex justify-content-center py-3 functional-navbar">
-      <div className="container row position-relative">
+      <div className="container row justify-content-center position-relative">
         <NavLink
-          className="col-3 text-center fw-bold"
+          className="col-2 text-center fw-bold navlink"
           to="/overview"
           activeClassName="active-link"
         >
           OVERVIEW
         </NavLink>
         <NavLink
-          className="col-3 text-center fw-bold"
+          className="col-2 text-center fw-bold"
           to="/all-time"
           activeClassName="active-link"
         >
           ALL TIME
         </NavLink>
         <NavLink
-          className="col-3 text-center fw-bold"
+          className="col-2 text-center fw-bold"
           to="/trends"
           activeClassName="active-link"
         >
           TRENDS
         </NavLink>
         <NavLink
-          className="col-3 text-center fw-bold"
+          className="col-2 text-center fw-bold"
           to="/budget"
           activeClassName="active-link"
         >

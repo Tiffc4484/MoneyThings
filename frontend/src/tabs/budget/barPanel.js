@@ -28,6 +28,8 @@ export default function BarPanel(props) {
           >
             {item.category}
             <ProgressBar
+              striped
+              aria-label={"budget progess" + index}
               now={item.amount.toFixed(2)}
               variant={getVariant(item.ratio)}
               label={`${item.ratio}%`}
