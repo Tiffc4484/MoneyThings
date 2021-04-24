@@ -2,8 +2,12 @@ nav {
 	background-color: rgb(51, 51, 51);
 }
 
+.nav-item {
+	color: rgba(153, 153, 153, 1);
+}
+
 .functional-navbar {
-	background-color: #869bb5;
+	background-color: rgba(169, 182, 204, 0.7);
 }
 
 body {
@@ -20,5 +24,22 @@ a:hover {
 
 .active-link {
 	color: rgba(255, 255, 255, 1);
-	text-decoration: underline;
+	text-decoration: none;
+	border-bottom: 3px solid #ffec67;
+	padding-bottom: 30px;
+}
+
+.functional-navbar a {
+	color: #333;
+}
+
+.functional-navbar a:hover {
+	color: #999;
+	text-decoration: none;
+
+	border-bottom: 3px solid #ccc;
+}
+
+.instruction-icon {
+	color: #ffec67;
 }
