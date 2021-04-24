@@ -31,8 +31,16 @@ export default function RecentTransaction(props) {
     return (
       <div>
         <ButtonGroup>
+          <style type="text/css">
+            {`
+                .btn-flat {
+                  background-color: #ffec67;
+                  color: #333;
+                }
+              `}
+          </style>
           <Button
-            variant="info"
+            variant="flat"
             onClick={() => {
               props.setDateRange(getToday());
             }}
@@ -40,7 +48,7 @@ export default function RecentTransaction(props) {
             Today
           </Button>
           <Button
-            variant="info"
+            variant="flat"
             onClick={() => {
               props.setDateRange(getLastWeek());
             }}
@@ -48,7 +56,7 @@ export default function RecentTransaction(props) {
             Last Week
           </Button>
           <Button
-            variant="info"
+            variant="flat"
             onClick={() => {
               props.setDateRange(getLastMonth());
             }}
@@ -56,7 +64,7 @@ export default function RecentTransaction(props) {
             Last Month
           </Button>
           <Button
-            variant="info"
+            variant="flat"
             onClick={() => {
               props.setDateRange(getLastYear());
             }}

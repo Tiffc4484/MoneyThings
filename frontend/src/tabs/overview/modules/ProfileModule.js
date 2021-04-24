@@ -38,10 +38,10 @@ export default function ProfileModule(props) {
             </div>
           </div>
           <div className="col-8 align-self-center">
-            <h3 className="mb-3">
+            <h2 className="mb-3">
               Good {getTime()}, {props.user.username}
-            </h3>
-            <h4 className="d-flex me-4">
+            </h2>
+            <h3 className="d-flex me-4">
               Your Balance:{" "}
               {balanceVisibility
                 ? parseFloat(props.user.balance).toFixed(2)
@@ -53,10 +53,10 @@ export default function ProfileModule(props) {
                   <FontAwesomeIcon icon={["far", "eye"]} />
                 )}
               </span>
-            </h4>
+            </h3>
           </div>
           <div className="fw-lighter mb-1 mt-4">Biography</div>
-          <h5 className="fst-italic">{props.user.biography}</h5>
+          <h4 className="fst-italic">{props.user.biography}</h4>
         </div>
       </div>
     </div>

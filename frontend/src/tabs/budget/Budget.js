@@ -43,6 +43,7 @@ export default function Budget(props) {
   return (
     <div
       className="flex-container"
+      aria-hidden="true"
       style={{ height: "80vh", overflowY: "scroll" }}
     >
       <div
