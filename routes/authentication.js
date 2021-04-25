@@ -63,9 +63,9 @@ router.post("/signup", async (req, res) => {
     const hash = await bcrypt.hash(req.body.password, 10);
     const data = {
       email: req.body.email,
-      username: req.body.email.split("@")[0],
+      username: req.body.email,
       password: hash,
-      balance: 0,
+      balance: 500,
       categories: {
         Income: ["Salary", "Transfer", "Stock"],
         Expense: [
@@ -77,12 +77,38 @@ router.post("/signup", async (req, res) => {
           "Games",
         ],
       },
-      budget: {},
+      budget: {
+        "Grocery" : 1000,
+      },
       avatar: 0,
       biography: "LifeStyle",
     };
-    console.log(data);
-    await getCollection("Users").insertOne(data);
+    const result = await getCollection("Users").insertOne(data);
+    const insertedId = result.insertedId.toString();
+    
+    const fake_categories = ["Grocery", "Health", "Outdoors", "Sports", "Games"];
+    const fake_merchant = ["Stracke LLC", "Murazik-Kirlin", "Cummerata-Miller", "Cummerata-Ritchie", "Rolfson"];
+    for (let i = 0; i < 5; i++) {
+      const fake_data = {
+        user_id: insertedId,
+        category: fake_categories[i],
+        merchant: fake_merchant[i],
+        date: Date.now() - i * 86400000,
+        remark: "",
+        amount: 100,
+        type: "Expense",
+      };
+      await getCollection("Transactions").insertOne(fake_data);
+    }
+    await getCollection("Transactions").insertOne({
+      user_id: insertedId,
+      category: "Salary",
+      merchant: "MoneyThings",
+      date: Date.now() - 5 * 86400000,
+      remark: "",
+      amount: 1000,
+      type: "Income",
+    });
     res.sendStatus(201);
   } catch (err) {
     console.log(err);
