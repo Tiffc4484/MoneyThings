@@ -1,5 +1,5 @@
 import React from "react";
-import ProgressBar from "react-bootstrap/ProgressBar";
+//import ProgressBar from "react-bootstrap/ProgressBar";
 import propTypes from "prop-types";
 
 export default function BarPanel(props) {
@@ -18,6 +18,7 @@ export default function BarPanel(props) {
     }
     return "danger";
   }
+
   return (
     <div className="ProgessBar flex-column align-items-center .ml-1">
       {props.barData.map((item, index) => {
@@ -27,14 +28,21 @@ export default function BarPanel(props) {
             style={{ padding: "5px", width: "70%", margin: "0 auto" }}
           >
             {item.category}
-            <ProgressBar
-              striped
-              aria-label={"budget progess" + index}
-              now={item.amount.toFixed(2)}
-              variant={getVariant(item.ratio)}
-              label={`${item.ratio}%`}
-              max={item.budget}
-            />
+            <div className="progress">
+              <div
+                className={
+                  "progress-bar progress-bar-striped bg-" +
+                  getVariant(item.ratio)
+                }
+                role="progressbar"
+                aria-label={"budget progess " + index}
+                style={{ width: item.amount.toFixed(2) + "%" }}
+                aria-valuenow={item.amount.toFixed(2)}
+                aria-valuemin="0"
+                aria-valuemax={item.budget}
+              >{`${item.ratio}%`}</div>
+            </div>
+
             {`$${item.amount.toFixed(2)} of $${item.budget}`}
             <span style={{ float: "right" }}>
               {item.left > 0
