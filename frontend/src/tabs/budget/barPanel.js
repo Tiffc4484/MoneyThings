@@ -36,7 +36,7 @@ export default function BarPanel(props) {
                 }
                 role="progressbar"
                 aria-label={"budget progess " + index}
-                style={{ width: item.amount.toFixed(2) + "%" }}
+                style={{ width: item.ratio + "%" }}
                 aria-valuenow={item.amount.toFixed(2)}
                 aria-valuemin="0"
                 aria-valuemax={item.budget}
