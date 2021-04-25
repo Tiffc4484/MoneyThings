@@ -16,7 +16,7 @@ export default function Modal(props) {
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title" id="exampleModalLabel">
-              Modal title
+              {props.title? props.title:""}
             </h5>
             <button
               type="button"
@@ -55,4 +55,5 @@ Modal.propTypes = {
   id: propTypes.string.isRequired,
   Content: propTypes.elementType.isRequired,
   dataHandler: propTypes.func.isRequired,
+  title: propTypes.string,
 };

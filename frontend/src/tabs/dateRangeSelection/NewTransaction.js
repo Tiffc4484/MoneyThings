@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import InputBox from "../../shared/InputBox.js";
 import propTypes from "prop-types";
 import DateTimePicker from "react-datetime-picker";
 import _ from "lodash";
+import CategoryWrapper from "./CategoryWrapper";
 
 export default function NewTransaction(props) {
   const [isIncome, setIsIncome] = useState(true);
@@ -12,6 +13,7 @@ export default function NewTransaction(props) {
   const [category, setCategory] = useState(props.user.categories.Income[0]);
   const [remark, setRemark] = useState("");
   const [date, setDate] = useState(new Date());
+  const modal_trigger = useRef();
 
   useEffect(() => {
     if (isIncome) {
@@ -66,6 +68,14 @@ export default function NewTransaction(props) {
       flag ? props.user.categories.Income : props.user.categories.Expense
     );
   }
+  
+  function handleCategorySelection(evt) {
+    if (evt.target.value !== "AddNewCategory_") {
+      return setCategory(evt.target.value);
+    } else {
+      modal_trigger.current.click();
+    }
+  }
 
   return (
     <div className="flex-container">
@@ -107,15 +117,14 @@ export default function NewTransaction(props) {
             className="form-select"
             id="select"
             value={category}
-            onChange={(evt) => {
-              setCategory(evt.target.value);
-            }}
+            onChange={handleCategorySelection}
           >
             {categories.map((item, index) => (
               <option value={item} key={"option-" + index}>
                 {item}
               </option>
             ))}
+            <option value="AddNewCategory_">... Add a new category</option>
           </select>
           <label htmlFor="select">Category</label>
         </div>
@@ -145,6 +154,12 @@ export default function NewTransaction(props) {
           <label htmlFor="remark">Remark</label>
         </div>
       </form>
+      <div
+        data-bs-toggle="modal"
+        data-bs-target="#new_category_modal"
+        ref={modal_trigger}
+      />
+      <CategoryWrapper user={props.user} refreshPage={props.refreshPage}/>
     </div>
   );
 }

@@ -25,10 +25,13 @@ export default function SelectionPanel(props) {
         Recent Transactions
         {showNewTrans ? null : (
           <div
-            className="position-absolute top-50 translate-middle-y new-btn"
+            className="position-absolute top-50 translate-middle-y new-btn d-flex"
             onClick={toggleSelectionPanelContent}
           >
-            <i className="fas fa-plus-square"></i>
+            <div className="me-1">Add</div>
+            <div className="align-self-center">
+              <i className="fas fa-plus-square"/>
+            </div>
           </div>
         )}
       </div>

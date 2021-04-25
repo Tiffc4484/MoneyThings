@@ -43,3 +43,7 @@ a:hover {
 .new-btn {
 	cursor: pointer;
 }
+
+.modal-dialog {
+  max-width: 50vw;
+}
