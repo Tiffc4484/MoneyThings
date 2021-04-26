@@ -51,13 +51,11 @@ router.post("/signup", async (req, res) => {
     return res.sendStatus(400);
   }
   try {
-    const collection = await getCollection("Users");
-    const resFind = await collection
-      .find({
+    const resFind = await getCollection("Users")
+      .findOne({
         email: req.body.email,
-      })
-      .toArray();
-    if (resFind.length !== 0) {
+      });
+    if (resFind) {
       return res.status(409).send("This email address has been registered");
     }
     const hash = await bcrypt.hash(req.body.password, 10);

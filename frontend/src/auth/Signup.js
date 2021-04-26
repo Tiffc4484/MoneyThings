@@ -29,7 +29,7 @@ export default function Signup() {
     setToggleVisibility(toggle_visibility === "password" ? "text" : "password");
   }
 
-  function handleSubmit(evt) {
+  async function handleSubmit(evt) {
     evt.preventDefault();
     if (!evt.target.checkValidity()) {
       return evt.target.classList.add("was-validated");
@@ -37,6 +37,7 @@ export default function Signup() {
     setEmail("");
     setPassword("");
     setPasswordConfirm("");
+    const hash = await password.hashCode();
     fetch("/authentication/signup", {
       method: "POST",
       headers: {
@@ -44,7 +45,7 @@ export default function Signup() {
       },
       body: JSON.stringify({
         email: email,
-        password: password,
+        password: hash,
       }),
     })
       .then((resRaw) => {
@@ -108,3 +109,14 @@ export default function Signup() {
     </form>
   );
 }
+
+String.prototype.hashCode = async function () {
+  // encode as (utf-8) Uint8Array
+  const msgUint8 = new TextEncoder().encode(this);
+  // hash the message
+  const hashBuffer = await crypto.subtle.digest("SHA-256", msgUint8);
+  // convert buffer to byte array
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  // convert bytes to hex string
+  return hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
+};

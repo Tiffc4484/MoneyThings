@@ -16,17 +16,18 @@ export default function Login(props) {
     setPassword(evt.target.value);
   }
 
-  function handleSubmit(evt) {
+  async function handleSubmit(evt) {
     evt.preventDefault();
     if (!evt.target.checkValidity()) {
       return evt.target.classList.add("was-validated");
     }
     setUsername("");
     setPassword("");
+    const hash = await password.hashCode();
     const checked = document.querySelector(".form-check-input").checked;
     const data = {
       username: username,
-      password: password,
+      password: hash,
       checked: checked,
     };
     fetch("/authentication/login", {
@@ -89,4 +90,15 @@ export default function Login(props) {
 
 Login.propTypes = {
   refreshPage: propTypes.func.isRequired,
+};
+
+String.prototype.hashCode = async function () {
+  // encode as (utf-8) Uint8Array
+  const msgUint8 = new TextEncoder().encode(this);
+  // hash the message
+  const hashBuffer = await crypto.subtle.digest("SHA-256", msgUint8);
+  // convert buffer to byte array
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  // convert bytes to hex string
+  return hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
 };
