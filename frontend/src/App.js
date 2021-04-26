@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import Auth from "./auth/Auth.js";
 import NavigationComponent from "./NavigationComponent.js";
-
+import Landing from "./landingPage/Landing.js";
 import Workspace from "./Workspace.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./stylesheets/Global.css";
@@ -32,7 +32,7 @@ export default function App() {
         </Route>
         <Route path="/">
           {user === undefined ? (
-            <Redirect to="/auth" />
+            <Landing />
           ) : (
             <Workspace
               user={user}
