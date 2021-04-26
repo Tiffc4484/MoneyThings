@@ -25,8 +25,8 @@ export default function Instruction() {
           <div className="modal-body">
             <div className="fw-bold">Overview</div>
             <div className="mb-3">
-              The overview tab displays your transaction data and charts within
-              this month.
+              You can find your most recent transactions and its visualization
+              as well as
             </div>
             <div className="fw-bold">All Time</div>
             <div className="mb-3">
