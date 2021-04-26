@@ -24,12 +24,6 @@ export default function Landing(props) {
                   the more you can earn. We promise you a brand new financial
                   attitude.
                 </p>
-                <Link
-                  className="btn btn-lg"
-                  style={{ backgroundColor: "#323e4e", color: "whitesmoke" }}
-                  to={link}
-                >
-                  Getting Started
                 <Link to={link}>
                   <button className="btn btn-lg btn-custom">Getting Started</button>
                 </Link>
