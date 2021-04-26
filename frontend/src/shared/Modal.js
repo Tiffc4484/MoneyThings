@@ -9,13 +9,13 @@ export default function Modal(props) {
       className="modal fade"
       id={props.id}
       tabIndex="-1"
-      aria-labelledby="exampleModalLabel"
+      aria-labelledby={props.id + "Title"}
       aria-hidden="true"
     >
       <div className="modal-dialog">
         <div className="modal-content">
           <div className="modal-header">
-            <h5 className="modal-title" id="exampleModalLabel">
+            <h5 className="modal-title" id={props.id + "Title"}>
               {props.title? props.title:""}
             </h5>
             <button

@@ -10,3 +10,12 @@
 .modify:hover {
   cursor: pointer;
 }
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff;
+  background-color: #323e4e;
+}
+
+.avatar-image:hover {
+  cursor: pointer;
+}

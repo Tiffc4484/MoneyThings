@@ -66,29 +66,29 @@ export default function Profile(props) {
         </div>
         <div>
           <div className="fw-light">Username:</div>
-          <h1
-            className="mb-0 modify"
+          <div
+            className="mb-0 modify fs-1"
             data-bs-toggle="modal"
             data-bs-target="#username_modal"
           >
             {username}
-          </h1>
+          </div>
         </div>
       </div>
       <div className="d-flex justify-content-center ms-5 mb-5">
         <div className="justify-content-start ms-5">
           <div className="fw-light">Biography:</div>
-          <h2
-            className="mb-5 modify"
+          <div
+            className="mb-5 modify fs-2 fst-italic"
             data-bs-toggle="modal"
             data-bs-target="#biography_modal"
           >
             {biography}
-          </h2>
+          </div>
         </div>
       </div>
       <div className="d-flex justify-content-end">
-        <button className="btn btn-outline-secondary" onClick={handleSubmit}>
+        <button className="btn btn-custom" onClick={handleSubmit}>
           Apply Changes
         </button>
       </div>
@@ -96,16 +96,19 @@ export default function Profile(props) {
         id="avatar_modal"
         Content={UpdateAvatar}
         dataHandler={setAvatarIndex}
+        title="Set Your Avatar"
       />
       <Modal
         id="username_modal"
         Content={UpdateUsername}
         dataHandler={setUsername}
+        title="Set Your Username"
       />
       <Modal
         id="biography_modal"
         Content={UpdateBiography}
         dataHandler={setBiography}
+        title="Set Your Biography"
       />
     </div>
   );
@@ -117,6 +120,7 @@ Profile.propTypes = {
 };
 
 function UpdateAvatar({ dataHandler }) {
+  const [selected, setSelected] = useState();
   return (
     <div className="row">
       {[...Array(9).keys()].map((item, index) => (
@@ -124,11 +128,18 @@ function UpdateAvatar({ dataHandler }) {
           className="col-4"
           key={"avatar-" + index}
           onClick={() => {
+            setSelected(index);
             dataHandler(index);
           }}
         >
           <div className="ratio ratio-1x1">
-            <img src={`../images/avatar/${index}.png`} alt="avatar" />
+            <img
+              className={
+                selected === index ? "shadow rounded-circle" : "rounded-circle"
+              }
+              src={`../images/avatar/${index}.png`}
+              alt="avatar"
+            />
           </div>
         </div>
       ))}

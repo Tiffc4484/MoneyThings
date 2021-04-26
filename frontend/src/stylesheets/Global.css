@@ -48,6 +48,7 @@ a:hover {
 }
 
 .modal-dialog {
+  max-height: 80vw;
 	max-width: 50vw;
 }
 
