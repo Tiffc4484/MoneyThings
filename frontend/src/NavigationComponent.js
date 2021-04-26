@@ -58,10 +58,9 @@ export default function NavigationComponent(props) {
           >
             <ul className="navbar-nav my-2 my-lg-0 navbar-nav-scroll">
               <li className="nav-item dropdown d-flex">
-                <label
+                <div
                   className="nav-link dropdown-toggle me-2"
                   id="navbarScrollingDropdown"
-                  role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                   tabIndex="0"
@@ -71,7 +70,7 @@ export default function NavigationComponent(props) {
                   }}
                 >
                   Welcome, {props.user.username}
-                </label>
+                </div>
 
                 <div>
                   <img

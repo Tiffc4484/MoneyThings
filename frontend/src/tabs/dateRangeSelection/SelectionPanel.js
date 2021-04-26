@@ -32,7 +32,7 @@ export default function SelectionPanel(props) {
           >
             <div className="me-1 align-self-center">Add</div>
             <div className="align-self-center">
-              <button className="btn">
+              <button className="btn" aria-label="add transaction">
                 <i className="fas fa-plus-square" />
               </button>
             </div>
