@@ -58,6 +58,7 @@ export default function Budget(props) {
             backgroundColor: "rgba(255,236,103, 0.3)",
             fontSize: "20px",
             fontWeight: "bold",
+            fontFamily: "Halant serif",
           }}
         >
           Add Expense Budget

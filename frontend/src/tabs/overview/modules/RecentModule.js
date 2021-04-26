@@ -8,7 +8,10 @@ export default function RecentModule(props) {
       className="flex-container border d-flex flex-column"
       style={{ overflowX: "hidden" }}
     >
-      <div className="overview-item border-bottom py-2 px-3  fw-bold text-black">
+      <div
+        className="overview-item border-bottom py-2 px-3  fw-bold text-black"
+        style={{ fontFamily: "Halant serif" }}
+      >
         Recent
       </div>
       <div className="d-flex flex-grow-1" style={{ width: "100%" }}>

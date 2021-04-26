@@ -7,11 +7,9 @@ nav {
 }
 
 .functional-navbar {
+	font-family: "Halant", serif;
+	font-weight: 500;
 	background-color: rgba(149, 153, 138, 0.5);
-}
-
-.halant {
-	font-family: "Nunito Sans", sans-serif;
 }
 
 body {

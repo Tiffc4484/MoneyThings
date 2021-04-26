@@ -69,6 +69,7 @@ export default function AllTime(props) {
               <label
                 className="form-check-label"
                 htmlFor="flexSwitchCheckDefault"
+                style={{ fontFamily: "Halant serif" }}
               >
                 GROUP BY CATEGORY/DATE
               </label>
