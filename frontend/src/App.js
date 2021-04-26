@@ -27,6 +27,9 @@ export default function App() {
     <Router>
       <NavigationComponent user={user} />
       <Switch>
+        <Route path="/auth">
+          {user !== undefined ? <Redirect to="/" /> : <Auth />}
+        </Route>
         <Route path="/">
           {user === undefined ? (
             <Landing />
@@ -37,9 +40,6 @@ export default function App() {
               setUser={setUser}
             />
           )}
-        </Route>
-        <Route path="/auth">
-          {user !== undefined ? <Redirect to="/" /> : <Auth />}
         </Route>
       </Switch>
     </Router>

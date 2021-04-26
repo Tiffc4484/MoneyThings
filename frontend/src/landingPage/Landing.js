@@ -1,9 +1,7 @@
 import React from "react";
 import "../stylesheets/landing.css";
-import { useHistory } from "react-router-dom";
 
 export default function Landing() {
-  let history = useHistory();
   return (
     <div>
       <div className="page-header gradient">
@@ -15,11 +13,7 @@ export default function Landing() {
                 Let’s sort us money affairs together, the more we get to know
                 you is more you can earn
               </p>
-              <button
-                type="button"
-                className="btn btn-outline-primary btn-lg"
-                onClick={history.push("/auth")}
-              >
+              <button type="button" className="btn btn-outline-primary btn-lg">
                 Getting Started
               </button>
             </div>
