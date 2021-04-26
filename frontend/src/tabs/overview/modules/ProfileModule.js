@@ -38,21 +38,23 @@ export default function ProfileModule(props) {
             </div>
           </div>
           <div className="col-8 align-self-center">
-            <h2 className="mb-3">
+            <h2 className="mb-3 fs-4">
               Good {getTime()}, {props.user.username}
             </h2>
-            <h3 className="d-flex me-4">
-              Your Balance:{" "}
-              {balanceVisibility
-                ? parseFloat(props.user.balance).toFixed(2)
-                : "*"}
-              <span className="ms-auto" onClick={toggleBalance}>
+            <h3 className="d-flex me-4 fs-5">
+              <div className="align-self-center">
+                Your Balance:{" "}
+                {balanceVisibility
+                  ? parseFloat(props.user.balance).toFixed(2)
+                  : "*"}
+              </div>
+              <button className="btn ms-auto fs-5" onClick={toggleBalance}>
                 {balanceVisibility ? (
                   <FontAwesomeIcon icon={["far", "eye-slash"]} />
                 ) : (
                   <FontAwesomeIcon icon={["far", "eye"]} />
                 )}
-              </span>
+              </button>
             </h3>
           </div>
           <div className="fw-lighter mb-1 mt-4">Biography</div>
