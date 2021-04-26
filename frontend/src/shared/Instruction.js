@@ -25,31 +25,29 @@ export default function Instruction() {
           <div className="modal-body">
             <div className="fw-bold">Overview</div>
             <div className="mb-3">
-              You can find your most recent transactions and its visualization
-              as well as
+              You can find your most recent transactions, expense/income
+              analysis, as well as expense usage information here.
             </div>
             <div className="fw-bold">All Time</div>
             <div className="mb-3">
-              In the all time tab there are two parts. The left part allows you
-              to choose a date range and retrieve transaction within that. At
-              the right side there is a detailed view of those data, grouped by
-              either categories or dates. You might also all a new transaction
-              by clicking the PLUS icon.
+              Add a new transaction on the selection panel. The left section
+              allows you to retrieve transactions within a certain date range.
+              The right section displays transactions with remarks grouped by
+              either a single date or category.
             </div>
             <div className="fw-bold">Trend</div>
             <div className="mb-3">
-              The trend tab displays your monthly data in charts. Your can check
-              your income and expense by a pie chart of different categories, or
-              daily data by a line chart.
+              We make it easy for you to understand your income/expense through
+              pie chart and line graph.
             </div>
             <div className="fw-bold">Budget</div>
             <div className="mb-3">
-              Set your monthly budget for better management of your money!
+              Set your monthly budgets for better saving money.
             </div>
             <div className="fw-bold">Account</div>
             <div className="mb-3">
-              Set your personal information like your avatar, your password, or
-              your favorite biography.
+              Reset your account information including avatar, password, and
+              biography.
             </div>
           </div>
           <div className="modal-footer">
