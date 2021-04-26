@@ -12,6 +12,21 @@ const transactionRouter = require("./routes/transaction");
 
 const app = express();
 
+/**
+ * enforce https link
+ */
+const env = process.env.NODE_ENV || "development";
+if (env === "production") {
+  app.enable("trust proxy");
+  app.use(function (req, res, next) {
+    if (req.header("x-forwarded-proto") !== "https") {
+      res.redirect("https://" + req.header("host") + req.url);
+    } else {
+      next();
+    }
+  });
+}
+
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
