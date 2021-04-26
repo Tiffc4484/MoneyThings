@@ -23,7 +23,7 @@ export default function NavigationComponent(props) {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark px-3">
-      <div className="container-fluid d-flex">
+      <div className="container d-flex">
         <Link className="navbar-brand" to="/">
           <div className="d-flex">
             <img
