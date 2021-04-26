@@ -23,7 +23,7 @@ export default function NavigationComponent(props) {
 
   return (
     <nav
-      className="navbar navbar-expand-lg navbar-dark px-3"
+      className="navbar navbar-expand-lg navbar-dark px-3 fixed-top"
       style={{ overflow: "hidden" }}
     >
       <div className="container d-flex">
