@@ -8,7 +8,8 @@ import propTypes from "prop-types";
 export default function SelectionPanel(props) {
   const [showNewTrans, setShowNewTrans] = useState(false);
 
-  function toggleSelectionPanelContent() {
+  function toggleSelectionPanelContent(evt) {
+    evt.preventDefault();
     setShowNewTrans(!showNewTrans);
   }
 
@@ -29,9 +30,11 @@ export default function SelectionPanel(props) {
             className="position-absolute top-50 translate-middle-y new-btn d-flex"
             onClick={toggleSelectionPanelContent}
           >
-            <div className="me-1">Add</div>
+            <div className="me-1 align-self-center">Add</div>
             <div className="align-self-center">
-              <i className="fas fa-plus-square" />
+              <button className="btn">
+                <i className="fas fa-plus-square" />
+              </button>
             </div>
           </div>
         )}

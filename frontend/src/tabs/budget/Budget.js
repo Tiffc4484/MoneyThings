@@ -67,7 +67,9 @@ export default function Budget(props) {
               className="position-absolute top-50 translate-middle-y new-btn"
               onClick={toggleBudgetPanel}
             >
-              <i className="fas fa-plus-square"></i>
+              <button className="btn">
+                <i className="fas fa-plus-square"/>
+              </button>
             </div>
           )}
         </div>

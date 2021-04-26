@@ -182,7 +182,9 @@ function FunctionalNavbar() {
           data-bs-toggle="modal"
           data-bs-target="#instruction_modal"
         >
-          <FontAwesomeIcon icon={["fas", "question"]} />
+          <div tabIndex="0">
+            <FontAwesomeIcon icon={["fas", "question"]} />
+          </div>
         </div>
         <Instruction />
       </div>

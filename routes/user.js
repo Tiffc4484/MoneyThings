@@ -143,9 +143,8 @@ router.post("/update-budget", async (req, res) => {
     return res.sendStatus(400);
   }
   try {
-    const collection = await getCollection("Users");
     const category = "budget." + req.body.category;
-    const resFind = await collection.updateOne(
+    await getCollection("Users").updateOne(
       { _id: ObjectId(req.session._id) },
       {
         $set: {
@@ -166,7 +165,6 @@ router.post("/update-budget", async (req, res) => {
 router.get("/get-budget", async (req, res) => {
   try {
     const collection = await getCollection("Users");
-    console.log(req.session._id);
     const resFind = await collection.findOne(
       { _id: ObjectId(req.session._id) },
       {

@@ -46,7 +46,7 @@ export default function SetBudget(props) {
           <button className="col-3 btn btn-secondary" onClick={props.toggle}>
             Cancel
           </button>
-          <div className="col-6"></div>
+          <div className="col-6"/>
           <button
             className="col-3 btn btn-secondary"
             onClick={(evt) => {

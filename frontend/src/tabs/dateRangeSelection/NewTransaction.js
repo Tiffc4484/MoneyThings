@@ -84,29 +84,29 @@ export default function NewTransaction(props) {
         className="flex-container d-flex flex-column"
       >
         <div className="row py-3 text-center btn-group mx-3" role="group">
-          <div
+          <button
             className="col-3 border-end btn btn-secondary"
             onClick={props.toggle}
           >
             Cancel
-          </div>
+          </button>
 
-          <div
+          <button
             className="col-3 border-end btn btn-secondary"
-            onClick={() => notIsIncome(true)}
+            onClick={(evt) => {evt.preventDefault(); notIsIncome(true);}}
             style={{
               textDecoration: isIncome ? "underline" : "none",
             }}
           >
             Income
-          </div>
-          <div
+          </button>
+          <button
             className="col-3 border-end btn btn-secondary"
-            onClick={() => notIsIncome(false)}
+            onClick={(evt) => {evt.preventDefault(); notIsIncome(false);}}
             style={{ textDecoration: isIncome ? "none" : "underline" }}
           >
             Expense
-          </div>
+          </button>
           <button className="col-3 btn btn-secondary">Save</button>
         </div>
         <div className="text-center my-3">
