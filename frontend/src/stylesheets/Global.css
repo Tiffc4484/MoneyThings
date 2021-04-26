@@ -10,7 +10,12 @@ nav {
 	background-color: rgba(149, 153, 138, 0.5);
 }
 
+.halant {
+	font-family: "Nunito Sans", sans-serif;
+}
+
 body {
+	font-family: "Nunito Sans", sans-serif;
 	background-color: #f0f3f7;
 }
 
@@ -45,5 +50,5 @@ a:hover {
 }
 
 .modal-dialog {
-  max-width: 50vw;
+	max-width: 50vw;
 }

@@ -22,9 +22,8 @@ export default function NavigationComponent(props) {
   }, [props.user]);
 
   return (
-    <nav
-      className="navbar navbar-expand-lg navbar-dark px-3">
-      <div className="container d-flex">
+    <nav className="navbar navbar-expand-lg navbar-dark px-3">
+      <div className="container d-flex halant">
         <Link className="navbar-brand" to="/">
           <div className="d-flex">
             <img
@@ -34,7 +33,10 @@ export default function NavigationComponent(props) {
               height="24"
               className="d-inline-block align-text-top me-2"
             />
-            <h1 className="font-weight-normal mb-0" style={{fontSize: "1.2rem"}}>
+            <h1
+              className="font-weight-normal mb-0"
+              style={{ fontSize: "1.2rem" }}
+            >
               MoneyThings
             </h1>
           </div>
