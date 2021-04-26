@@ -24,7 +24,7 @@ export default function Workspace(props) {
   const [income, setIncome] = useState({});
   const [expense, setExpense] = useState({});
   const [dateGroup, setDateGroup] = useState({});
-
+  
   useEffect(() => {
     fetch("/transaction/recent", {
       method: "POST",

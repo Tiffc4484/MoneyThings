@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import InputBox from "../shared/InputBox.js";
 import { Link, useHistory } from "react-router-dom";
+import propTypes from "prop-types";
 
-export default function Login() {
+export default function Login(props) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const history = useHistory();
@@ -42,6 +43,7 @@ export default function Login() {
           });
         } else {
           alert("Log in succeed");
+          props.refreshPage((prev) => !prev);
           history.push("/overview");
         }
       })
@@ -84,3 +86,7 @@ export default function Login() {
     </form>
   );
 }
+
+Login.propTypes = {
+  refreshPage: propTypes.func.isRequired,
+};

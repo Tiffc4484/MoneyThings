@@ -28,7 +28,7 @@ export default function App() {
       <NavigationComponent user={user} />
       <Switch>
         <Route path="/auth">
-          {user ? <Redirect to="/overview" /> : <Auth />}
+          {user ? <Redirect to="/overview" /> : <Auth refreshPage={refreshPage}/>}
         </Route>
         <Route exact path="/">
           <Landing user={user}/>

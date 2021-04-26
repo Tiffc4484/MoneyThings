@@ -4,8 +4,9 @@ import "../stylesheets/Auth.css";
 import Login from "./Login.js";
 import Signup from "./Signup.js";
 import NewPassword from "../tabs/account/NewPassword.js";
+import propTypes from "prop-types";
 
-export default function Auth() {
+export default function Auth(props) {
   return (
     <Router>
       <Switch>
@@ -16,9 +17,13 @@ export default function Auth() {
           <NewPassword />
         </Route>
         <Route path="/auth">
-          <Login />
+          <Login refreshPage={props.refreshPage}/>
         </Route>
       </Switch>
     </Router>
   );
 }
+
+Auth.propTypes = {
+  refreshPage: propTypes.func.isRequired,
+};
