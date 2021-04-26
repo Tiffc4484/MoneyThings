@@ -12,9 +12,9 @@ export default function Instruction() {
       <div className="modal-dialog">
         <div className="modal-content">
           <div className="modal-header">
-            <h5 className="modal-title" id="exampleModalLabel">
+            <div className="modal-title fw-bold fs-5" id="exampleModalLabel">
               Instruction
-            </h5>
+            </div>
             <button
               type="button"
               className="btn-close"

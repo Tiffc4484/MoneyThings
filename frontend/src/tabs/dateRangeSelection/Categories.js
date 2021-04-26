@@ -51,6 +51,7 @@ export default function Categories(props) {
       type: type,
       category: category,
     };
+    setCreateCategory("");
     fetch("/user/create-category", {
       method: "POST",
       headers: {

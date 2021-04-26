@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import InputBox from "../shared/InputBox.js";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
+  const history = useHistory();
+  
   function handleUsername(evt) {
     setUsername(evt.target.value);
   }
@@ -41,7 +42,7 @@ export default function Login() {
           });
         } else {
           alert("Log in succeed");
-          window.location = "/";
+          history.push("/overview");
         }
       })
       .catch((err) => {

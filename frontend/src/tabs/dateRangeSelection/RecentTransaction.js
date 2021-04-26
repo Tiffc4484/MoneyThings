@@ -107,6 +107,7 @@ export default function RecentTransaction(props) {
               clearIcon={null}
               minDate={new Date(0)}
               maxDate={new Date()}
+              calendarAriaLabel="calendar_icon"
             />
           ) : (
             <div className="mt-4">
@@ -118,6 +119,7 @@ export default function RecentTransaction(props) {
                 maxDetail="year"
                 minDate={new Date(0)}
                 maxDate={new Date()}
+                calendarAriaLabel="calendar_icon"
               />
             </div>
           )}

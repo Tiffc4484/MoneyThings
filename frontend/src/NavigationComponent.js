@@ -23,20 +23,20 @@ export default function NavigationComponent(props) {
 
   return (
     <nav
-      className="navbar navbar-expand-lg navbar-dark px-3 fixed-top"
-      style={{ overflow: "hidden" }}
-    >
+      className="navbar navbar-expand-lg navbar-dark px-3">
       <div className="container d-flex">
         <Link className="navbar-brand" to="/">
           <div className="d-flex">
             <img
               src={"../images/MoneyEmoji.png"}
               alt="logo"
-              width="50"
-              height="40"
+              width="32"
+              height="24"
               className="d-inline-block align-text-top me-2"
             />
-            MoneyThings
+            <h1 className="font-weight-normal mb-0" style={{fontSize: "1.2rem"}}>
+              MoneyThings
+            </h1>
           </div>
         </Link>
         {!props.user ? (

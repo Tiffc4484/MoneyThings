@@ -28,11 +28,14 @@ export default function App() {
       <NavigationComponent user={user} />
       <Switch>
         <Route path="/auth">
-          {user !== undefined ? <Redirect to="/" /> : <Auth />}
+          {user ? <Redirect to="/overview" /> : <Auth />}
+        </Route>
+        <Route exact path="/">
+          <Landing user={user}/>
         </Route>
         <Route path="/">
-          {user === undefined ? (
-            <Landing />
+          {!user ? (
+            <Redirect to="/auth"/>
           ) : (
             <Workspace
               user={user}

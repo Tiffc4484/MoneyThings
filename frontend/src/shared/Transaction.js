@@ -57,7 +57,7 @@ export default function Transaction(props) {
 
   return (
     <div className="mb-3 position-relative">
-      <ul>
+      <ul className="ps-0">
         <li
           className="list-group-item d-flex justify-content-between align-item-center list-group-item"
           style={{ fontWeight: "bold" }}
