@@ -75,9 +75,11 @@ export default function Transaction(props) {
             <Badge pill variant={props.type === "Expense" ? "danger" : "flat"}>
               ${props.amount}
             </Badge>{" "}
-            {props.refreshPage !== undefined ? (
-              <TiDelete size="1.5em" onClick={deleteTransaction} />
-            ) : null}
+            <div tabIndex="0" style={{ display: "inline" }}>
+              {props.refreshPage !== undefined ? (
+                <TiDelete size="1.5em" onClick={deleteTransaction} />
+              ) : null}
+            </div>
           </div>
         </li>
         <li
