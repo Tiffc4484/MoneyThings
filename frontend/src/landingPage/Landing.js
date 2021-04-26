@@ -146,7 +146,7 @@ export default function Landing(props) {
                     </svg>
                   </div>
                   <h3>Budget</h3>
-                  <p>Set a goal to manage your expenses</p>
+                  <p>Set a goal and let us do the math for you</p>
                 </div>
               </div>
             </div>
