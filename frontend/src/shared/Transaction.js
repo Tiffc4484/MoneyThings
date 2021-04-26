@@ -67,7 +67,7 @@ export default function Transaction(props) {
             <style type="text/css">
               {`
                 .badge-flat {
-                  background-color: blue;
+                  background-color: #2266d8;
                   color: white;
                 }
               `}
