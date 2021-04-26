@@ -36,7 +36,7 @@ export default function Modal(props) {
             </button>
             <button
               type="button"
-              className="btn btn-primary"
+              className="btn btn-custom"
               data-bs-dismiss="modal"
               onClick={() => {
                 props.dataHandler(data);

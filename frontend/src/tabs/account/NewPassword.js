@@ -28,8 +28,8 @@ export default function NewPassword() {
     if (!evt.target.checkValidity()) {
       return evt.target.classList.add("was-validated");
     }
-    // setPassword("");
-    // setPasswordConfirm("");
+    setPassword("");
+    setPasswordConfirm("");
     fetch("/user/new-password", {
       method: "POST",
       headers: {
@@ -82,7 +82,7 @@ export default function NewPassword() {
           Show Password
         </label>
       </div>
-      <button className="mb-3 btn btn-primary text-center">Submit</button>
+      <button className="mb-3 btn btn-custom text-center">Submit</button>
     </form>
   );
 }

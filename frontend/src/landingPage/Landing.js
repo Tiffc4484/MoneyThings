@@ -18,8 +18,8 @@ export default function Landing(props) {
                   Let’s sort us money affairs together, the more we get to know
                   you is more you can earn
                 </p>
-                <Link className="btn btn-lg" style={{backgroundColor: "#323e4e", color: "whitesmoke"}} to={link}>
-                  Getting Started
+                <Link to={link}>
+                  <button className="btn btn-lg btn-custom">Getting Started</button>
                 </Link>
               </div>
               <div className="col-md-5 pt-3">

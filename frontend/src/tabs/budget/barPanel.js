@@ -11,7 +11,7 @@ export default function BarPanel(props) {
       return "success";
     }
     if (ratio < 75) {
-      return "";
+      return "primary";
     }
     if (ratio < 100) {
       return "warning";
@@ -31,7 +31,7 @@ export default function BarPanel(props) {
             <div className="progress">
               <div
                 className={
-                  "progress-bar progress-bar-striped bg-" +
+                  "progress-bar bg-" +
                   getVariant(item.ratio)
                 }
                 role="progressbar"

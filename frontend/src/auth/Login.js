@@ -78,7 +78,7 @@ export default function Login(props) {
           Keep Me Logged in
         </label>
       </div>
-      <button className="mb-3 btn btn-primary text-center">Submit</button>
+      <button className="mb-3 btn btn-custom text-center">Submit</button>
       <div className="mb-2 d-flex justify-content-end">
         <Link className="text-end d-block" to="/auth/signup">
           Sign up

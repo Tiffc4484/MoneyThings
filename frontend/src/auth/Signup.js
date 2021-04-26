@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import InputBox from "../shared/InputBox.js";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 export default function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [password_confirm, setPasswordConfirm] = useState("");
   const [toggle_visibility, setToggleVisibility] = useState("password");
+  const history = useHistory();
 
   function handleEmail(evt) {
     setEmail(evt.target.value);
@@ -55,7 +56,7 @@ export default function Signup() {
           });
         } else {
           alert("Sign up succeed");
-          window.location = "/";
+          history.push("/auth/login");
         }
       })
       .catch((err) => {
@@ -100,7 +101,7 @@ export default function Signup() {
           Show Password
         </label>
       </div>
-      <button className="mb-3 btn btn-primary text-center">Submit</button>
+      <button className="mb-3 btn btn-custom text-center">Submit</button>
       <div className="mb-2 d-flex justify-content-end">
         <Link className="text-end d-block" to="/auth/login">
           Log in

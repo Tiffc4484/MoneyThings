@@ -17,17 +17,17 @@ export default function InputBox(props) {
   const [id] = useState(_uniqueId("input-"));
 
   return (
-    <div className="form-floating my-3">
+    <div className="my-3">
+      <label className="form-label" htmlFor={id}>{props.label}</label>
       <input
         type={props.type === undefined ? "text" : props.type}
-        className="form-control"
+        className="form-control fs-5"
         id={id}
         value={props.value}
         onChange={props.onChange}
         placeholder={""}
         required={props.required || false}
       />
-      <label htmlFor={id}>{props.label}</label>
       <div
         className={
           "invalid-feedback" + (props.feedback === undefined ? " d-none" : "")

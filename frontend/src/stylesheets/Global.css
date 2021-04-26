@@ -52,3 +52,31 @@ a:hover {
 .modal-dialog {
 	max-width: 50vw;
 }
+
+.btn-custom {
+  color: whitesmoke;
+  background-color: #323e4e;
+  border-color: #323e4e;
+}
+
+.btn-custom:hover {
+  color: white;
+  background-color: #526580;
+  border-color: #526580;
+}
+
+.bg-info {
+  color: #402307;
+}
+
+.bg-warning {
+  color: #545454;
+}
+
+.bg-primary {
+  color: #141414;
+}
+
+.bg-success {
+  color: #292929;
+}
