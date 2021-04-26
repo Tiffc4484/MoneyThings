@@ -49,7 +49,7 @@ export default function Budget(props) {
         className="setBudgetButton flex-container mt-5"
         style={{ padding: "5px", width: "70%", margin: "0 auto" }}
       >
-        <div>
+        <div style={{ backgroundColor: "white" }}>
           <BarPanel barData={barData} />
         </div>
         <div
