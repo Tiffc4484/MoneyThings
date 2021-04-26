@@ -1,0 +1,12 @@
+.modify::after {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.5rem;
+  content: "";
+  background-image: url("svg/pencil.svg");
+}
+
+.modify:hover {
+  cursor: pointer;
+}
