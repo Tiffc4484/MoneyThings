@@ -21,7 +21,6 @@ export default function SelectionPanel(props) {
           fontSize: "20px",
           fontWeight: "bold",
           fontFamily: "Halant serif",
-          backgroundColor: "rgba(255,236,103, 0.3)",
         }}
       >
         Recent Transactions

@@ -127,7 +127,7 @@ export default function RecentTransaction(props) {
         <div className="text-center">{match ? AllTimeShortcuts() : null}</div>
       </div>
       <div className="flex-grow-1 d-flex flex-column">
-        <div className="my-3 mx-2 text-center flex-grow-1">
+        <div className="mb-1 mt-3 mx-2 text-center flex-grow-1">
           {props.recent.slice(page * 4 - 4, page * 4).map((i, index) => (
             <Transaction
               key={"RecentTransaction-" + index}
@@ -144,7 +144,7 @@ export default function RecentTransaction(props) {
           ))}
         </div>
         <div
-          className="row btn-group d-flex justify-content-center mb-5 mt-3 mx-2"
+          className="row btn-group d-flex justify-content-center mb-5 mt-2 mx-2"
           role="group"
           aria-label="page navigation button"
         >
