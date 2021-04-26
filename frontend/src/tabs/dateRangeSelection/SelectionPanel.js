@@ -19,6 +19,7 @@ export default function SelectionPanel(props) {
         style={{
           fontSize: "20px",
           fontWeight: "bold",
+          fontFamily: "Halant serif",
           backgroundColor: "rgba(255,236,103, 0.3)",
         }}
       >
@@ -30,7 +31,7 @@ export default function SelectionPanel(props) {
           >
             <div className="me-1">Add</div>
             <div className="align-self-center">
-              <i className="fas fa-plus-square"/>
+              <i className="fas fa-plus-square" />
             </div>
           </div>
         )}

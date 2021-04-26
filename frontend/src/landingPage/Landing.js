@@ -1,29 +1,43 @@
 import React from "react";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../stylesheets/landing.css";
 import propTypes from "prop-types";
 
 export default function Landing(props) {
   const link = props.user ? "/overview" : "/auth";
-  
+
   return (
-    <div className="hide-scroll" style={{height: "180vh", overflowY: "scroll", overflowX: "hidden"}}>
+    <div
+      className="hide-scroll"
+      style={{ height: "180vh", overflowY: "scroll", overflowX: "hidden" }}
+    >
       <div>
         <div className="page-header gradient">
           <div className="container pt-3">
             <div className="row justify-content-center align-items-center">
               <div className="col-md-5">
-                <h2>Your financial management is in good hands</h2>
+                <h2 style={{ fontWeight: 800 }}>
+                  Heart of Perfect Financial Planning
+                </h2>
                 <p>
-                  Let’s sort us money affairs together, the more we get to know
-                  you is more you can earn
+                  Let’s sort money affairs together, the more we get to know you
+                  the more you can earn. We promise you a brand new financial
+                  attitude.
                 </p>
-                <Link className="btn btn-lg" style={{backgroundColor: "#323e4e", color: "whitesmoke"}} to={link}>
+                <Link
+                  className="btn btn-lg"
+                  style={{ backgroundColor: "#323e4e", color: "whitesmoke" }}
+                  to={link}
+                >
                   Getting Started
                 </Link>
               </div>
               <div className="col-md-5 pt-3">
-                <img src={"../images/pngegg.png"} height="500" alt="pig image" />
+                <img
+                  src={"../images/pngegg.png"}
+                  height="500"
+                  alt="pig image"
+                />
               </div>
             </div>
           </div>
@@ -38,12 +52,16 @@ export default function Landing(props) {
         <div className="intro mb-5">
           <div className="row justify-content-center text-center">
             <div className="col-md-6 justify-content-center">
-              <h2>What can you do with</h2>
-              <h2>MoneyThings</h2>
+              <h2 style={{ fontWeight: 800, fontSize: "2.5rem" }}>
+                What can you do with
+              </h2>
+              <h2 style={{ fontWeight: 800, fontSize: "2.5rem" }}>
+                MoneyThings
+              </h2>
             </div>
           </div>
         </div>
-    
+
         <div className="icons mt-5 mb-5">
           <div className="container">
             <div className="row justify-content-center align-self-center text-center">

@@ -35,14 +35,20 @@ export default function NavigationComponent(props) {
             />
             <h1
               className="font-weight-normal mb-0"
-              style={{ fontSize: "1.2rem" }}
+              style={{
+                fontSize: "1.5rem",
+                fontFamily: "Halant serif",
+              }}
             >
               MoneyThings
             </h1>
           </div>
         </Link>
         {!props.user ? (
-          <div className="nav-link" style={{ color: "rgba(255,255,255,1)" }}>
+          <div
+            className="nav-link"
+            style={{ color: "rgba(255,255,255,1)", fontFamily: "Halant serif" }}
+          >
             Welcome, Visitor
           </div>
         ) : (
@@ -58,7 +64,10 @@ export default function NavigationComponent(props) {
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                  style={{ color: "rgba(255,255,255, 0.8)" }}
+                  style={{
+                    color: "rgba(255,255,255, 0.8)",
+                    fontFamily: "Halant serif",
+                  }}
                 >
                   Welcome, {props.user.username}
                 </div>

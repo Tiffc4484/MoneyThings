@@ -23,7 +23,10 @@ export default function ChartModule(props) {
 
   return (
     <div className="flex-container border d-flex flex-column">
-      <div className="overview-item border-bottom py-2 px-3 fw-bold text-black">
+      <div
+        className="overview-item border-bottom py-2 px-3 fw-bold text-black"
+        style={{ fontFamily: "Halant serif" }}
+      >
         Chart
       </div>
       <div className="d-flex flex-grow-1 pb-3">
