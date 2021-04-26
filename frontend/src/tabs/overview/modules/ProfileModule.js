@@ -51,7 +51,7 @@ export default function ProfileModule(props) {
                   ? parseFloat(props.user.balance).toFixed(2)
                   : "*"}
               </div>
-              <button className="btn ms-auto fs-5" onClick={toggleBalance}>
+              <button className="btn ms-auto fs-5" onClick={toggleBalance} aria-label="balance-visibility">
                 {balanceVisibility ? (
                   <FontAwesomeIcon icon={["far", "eye-slash"]} />
                 ) : (

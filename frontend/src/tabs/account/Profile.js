@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import propTypes from "prop-types";
 import Modal from "../../shared/Modal";
 import InputBox from "../../shared/InputBox";
+import "../../stylesheets/Profile.css";
 
 export default function Profile(props) {
   const [avatarIndex, setAvatarIndex] = useState(0);
@@ -52,19 +53,21 @@ export default function Profile(props) {
   return (
     <div className="flex-container d-flex flex-column justify-content-center pb-5">
       <div className="d-flex justify-content-center align-items-center mb-5">
-        <img
-          className="me-5"
-          src={avatar}
-          alt="avatar"
-          width="200"
-          height="200"
-          data-bs-toggle="modal"
-          data-bs-target="#avatar_modal"
-        />
+        <div className="">
+          <img
+            className="me-5 modify"
+            src={avatar}
+            alt="avatar"
+            width="200"
+            height="200"
+            data-bs-toggle="modal"
+            data-bs-target="#avatar_modal"
+          />
+        </div>
         <div>
           <div className="fw-light">Username:</div>
           <h1
-            className="mb-0"
+            className="mb-0 modify"
             data-bs-toggle="modal"
             data-bs-target="#username_modal"
           >
@@ -76,7 +79,7 @@ export default function Profile(props) {
         <div className="justify-content-start ms-5">
           <div className="fw-light">Biography:</div>
           <h2
-            className="mb-5"
+            className="mb-5 modify"
             data-bs-toggle="modal"
             data-bs-target="#biography_modal"
           >
