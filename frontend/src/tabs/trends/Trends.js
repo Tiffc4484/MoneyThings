@@ -1,41 +1,12 @@
 import React, { useState } from "react";
-import MyPie from "../../shared/Pie";
 import propTypes from "prop-types";
-import LineChartModule from "../../shared/LineChartModule";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
+import PlainTable from "./PlainTable";
+import Charts from "./Charts";
 
 export default function Trends(props) {
-  const [content, setContent] = useState("expense");
-
-  function typeData(type) {
-    if (Object.keys(type).length === 0) return [];
-    const data = [];
-    // let totalExpense = 0;
-    // Object.keys(type).map((item) => {
-    //   type[item].map((item) => {
-    //     totalExpense += item.amount;
-    //   });
-    // });
-    Object.keys(type).map((item) => {
-      const object = {};
-      const r = (Math.random() * 255).toFixed(0);
-      const g = (Math.random() * 255).toFixed(0);
-      const b = (Math.random() * 255).toFixed(0);
-      let value = 0;
-      type[item].map((item) => {
-        value += item.amount;
-      });
-
-      object["value"] = parseFloat(value).toFixed(2);
-      object["id"] = item;
-      object["label"] = item;
-      object["color"] = `rgb(${r}, ${g}, ${b})`;
-      data.push(object);
-    });
-
-    return data;
-  }
-
+  const [content, setContent] = useState("table");
+  
   return (
     <div className="flex-container">
       <div style={{ height: "calc(100vh - 6rem)" }} className="pt-3">
@@ -44,10 +15,10 @@ export default function Trends(props) {
             <button
               className="btn btn-secondary"
               onClick={() => {
-                setContent("income");
+                setContent("table");
               }}
             >
-              Show Income Category Pie
+              Show Plain Table
             </button>
             <button
               className="btn btn-secondary"
@@ -60,6 +31,14 @@ export default function Trends(props) {
             <button
               className="btn btn-secondary"
               onClick={() => {
+                setContent("income");
+              }}
+            >
+              Show Income Category Pie
+            </button>
+            <button
+              className="btn btn-secondary"
+              onClick={() => {
                 setContent("dateGroup");
               }}
             >
@@ -67,17 +46,12 @@ export default function Trends(props) {
             </button>
           </ButtonGroup>
         </div>
-        <div
-          className="d-flex justify-content-center me-2"
-          style={{ height: "80%" }}
-        >
-          <div className="flex-container" style={{ width: "90%" }}>
-            {content === "dateGroup" ? (
-              <LineChartModule data={props.dateGroup} />
-            ) : (
-              <MyPie data={typeData(props[content])} />
-            )}
-          </div>
+        <div className="hide-scroll" style={{backgroundColor: "white", height: "80vh", overflowY: "scroll"}} tabIndex="0">
+          {content === "table" ? (
+            <PlainTable {...props} />
+          ) : (
+            <Charts {...props} content={content} />
+          )}
         </div>
       </div>
     </div>

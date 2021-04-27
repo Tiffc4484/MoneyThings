@@ -62,6 +62,7 @@ export default function Profile(props) {
             height="200"
             data-bs-toggle="modal"
             data-bs-target="#avatar_modal"
+            tabIndex="0"
           />
         </div>
         <div>
@@ -70,6 +71,7 @@ export default function Profile(props) {
             className="mb-0 modify fs-1"
             data-bs-toggle="modal"
             data-bs-target="#username_modal"
+            tabIndex="0"
           >
             {username}
           </div>
@@ -82,6 +84,7 @@ export default function Profile(props) {
             className="mb-5 modify fs-2 fst-italic"
             data-bs-toggle="modal"
             data-bs-target="#biography_modal"
+            tabIndex="0"
           >
             {biography}
           </div>
