@@ -19,7 +19,7 @@ export default function App() {
   useEffect(() => {
     getUser().then((user) => {
       setUser(user);
-      console.log(user);
+      // console.log(user);
     });
   }, [flag]);
 
@@ -28,14 +28,18 @@ export default function App() {
       <NavigationComponent user={user} />
       <Switch>
         <Route path="/auth">
-          {user ? <Redirect to="/overview" /> : <Auth refreshPage={refreshPage}/>}
+          {user ? (
+            <Redirect to="/overview" />
+          ) : (
+            <Auth refreshPage={refreshPage} />
+          )}
         </Route>
         <Route exact path="/">
-          <Landing user={user}/>
+          <Landing user={user} />
         </Route>
         <Route path="/">
           {!user ? (
-            <Redirect to="/auth"/>
+            <Redirect to="/auth" />
           ) : (
             <Workspace
               user={user}

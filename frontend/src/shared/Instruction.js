@@ -27,13 +27,26 @@ export default function Instruction() {
             <div className="mb-3">
               You can find your most recent transactions, expense/income
               analysis, as well as expense usage information here.
+              Scroll into any sub-module for more information.
+            </div>
+            <div className="fw-bold">Selection Panel</div>
+            <div className="mb-3">
+              On the left side of any tab except the overview, there is the
+              selection panel, in which there displays the recent transactions
+              of given date range. And quick shortcuts are provided in the
+              all time tab.
+              On clicking the Add + button on the right top, you are able to add
+              a new transaction. It is possible to customize your own categories
+              if you click the Add A New Category option.
             </div>
             <div className="fw-bold">All Time</div>
             <div className="mb-3">
-              Add a new transaction on the selection panel. The left section
-              allows you to retrieve transactions within a certain date range.
               The right section displays transactions with remarks grouped by
-              either a single date or category.
+              either a single date or category. You can easily toggle between
+              them by clicking the switch on the top of the section.
+              Detailed transactions are collapsed by default. And it will not
+              display if there is not any transactions on this date/in this
+              category
             </div>
             <div className="fw-bold">Trend</div>
             <div className="mb-3">

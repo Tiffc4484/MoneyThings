@@ -46,7 +46,7 @@ export default function Transaction(props) {
             }
             props.setRecent(array);
             props.refreshPage((prev) => !prev);
-            console.log("Transaction deleted");
+            // console.log("Transaction deleted");
           }
         })
         .catch((err) => {

@@ -81,9 +81,9 @@ export default function AllTime(props) {
         </div>
         <div className="pt-3">
           {isGroupByDate ? (
-            <div className="ms-4 me-5 mt-3">{groupByDate()}</div>
+            <div className="ms-4 me-4 mt-3">{groupByDate()}</div>
           ) : (
-            <div className="ms-4 me-5">
+            <div className="ms-4 me-4">
               <div className="mb-5">
                 {groupByCategory(props.income, "Income")}
               </div>

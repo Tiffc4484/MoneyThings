@@ -78,7 +78,7 @@ export default function Workspace(props) {
   return (
     <div className="flex-grow-1 d-flex flex-column">
       <FunctionalNavbar />
-      <div className="flex-grow-1">
+      <div className="flex-grow-1 px-3">
         <Switch>
           <Route path={["/all-time", "/trends", "/budget"]}>
             <div className="row flex-container">

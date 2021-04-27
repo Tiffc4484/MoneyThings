@@ -28,6 +28,9 @@ export default function NewTransaction(props) {
     if (!evt.target.checkValidity()) {
       return evt.target.classList.add("was-validated");
     }
+    setMerchant("");
+    setAmount("");
+    setRemark("");
     const data = {
       type: isIncome ? "Income" : "Expense",
       category: category,
@@ -160,6 +163,7 @@ export default function NewTransaction(props) {
           value={amount}
           type="number"
           onChange={(evt) => setAmount(evt.target.value)}
+          feedback="Please provide a valid amount"
           required={true}
         />
         <div className="form-floating mt-3 mb-5 flex-grow-1">

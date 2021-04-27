@@ -7,8 +7,7 @@ import propTypes from "prop-types";
 export default function SelectionPanel(props) {
   const [showNewTrans, setShowNewTrans] = useState(false);
 
-  function toggleSelectionPanelContent(evt) {
-    evt.preventDefault();
+  function toggleSelectionPanelContent() {
     setShowNewTrans(!showNewTrans);
   }
 
