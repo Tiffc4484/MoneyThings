@@ -15,7 +15,7 @@ export default function PlainTable(props) {
       return "danger";
     }
   }
-  
+
   function dateData() {
     const data = [
       {
@@ -62,11 +62,11 @@ export default function PlainTable(props) {
     }
     return data;
   }
-  
+
   return (
     <div className="flex-container">
       <div className="d-flex justify-content-center">
-        <div className="mb-3" style={{width: "80%"}}>
+        <div className="mb-3" style={{ width: "80%" }}>
           <div className="mb-3">
             <h2 className="fw-bold mb-2 pt-3">Expense</h2>
             <table className="table">
@@ -79,16 +79,16 @@ export default function PlainTable(props) {
               </thead>
               <tbody>
                 {dateData()[0].data.map((item, index) => (
-                  <tr key={"tr-expense"+index}>
+                  <tr key={"tr-expense" + index}>
                     <th scope="row">{item.x}</th>
-                    <td >{item.y.toFixed(2)}</td>
-                    <td className={"bg-" + getBackground(item.y)}/>
+                    <td>{parseFloat(item.y).toFixed(2)}</td>
+                    <td className={"bg-" + getBackground(item.y)} />
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-    
+
           <div className="pb-3">
             <h2 className="fw-bold mb-2">Income</h2>
             <table className="table">
@@ -101,16 +101,15 @@ export default function PlainTable(props) {
               </thead>
               <tbody>
                 {dateData()[1].data.map((item, index) => (
-                  <tr key={"tr-income"+index}>
+                  <tr key={"tr-income" + index}>
                     <th>{item.x}</th>
-                    <td>{item.y.toFixed(2)}</td>
-                    <td className={"bg-" + getBackground(item.y)}/>
+                    <td>{parseFloat(item.y).toFixed(2)}</td>
+                    <td className={"bg-" + getBackground(item.y)} />
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-  
         </div>
       </div>
     </div>
