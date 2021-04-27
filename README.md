@@ -6,6 +6,7 @@ MoneyThings is a desktop Single Page Application for personal finance management
 
 ![index](./assets/landing.png)
 
+
 ![index](./assets/index.jpg)
 
 ## Author
