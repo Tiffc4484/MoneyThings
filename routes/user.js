@@ -65,7 +65,9 @@ router.post("/update-profile", async (req, res) => {
     });
     console.log(resFind);
     if (resFind !== null) {
-      return res.status(400).send("This username has been occupied.");
+      if (req.session.user.username !== req.body.username) {
+        return res.status(400).send("This username has been occupied.");
+      }
     }
     const data = {
       username: req.body.username,

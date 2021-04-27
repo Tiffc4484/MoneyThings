@@ -41,7 +41,7 @@ export default function Profile(props) {
             alert(res);
           });
         } else {
-          console.log("Profile updated");
+          alert("Profile updated");
           props.refreshPage((prev) => !prev);
         }
       })
