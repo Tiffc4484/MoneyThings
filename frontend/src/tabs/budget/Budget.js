@@ -40,11 +40,7 @@ export default function Budget(props) {
     setBudgetPanel(!showBudgetPanel);
   }
   return (
-    <div
-      className="flex-container"
-      style={{ height: "80vh", overflowY: "scroll" }}
-      tabIndex="0"
-    >
+    <div className="flex-container" style={{ height: "80vh" }}>
       <div
         className="setBudgetButton flex-container mt-5"
         style={{ padding: "5px", width: "70%", margin: "0 auto" }}
@@ -63,12 +59,11 @@ export default function Budget(props) {
           Add Expense Budget
           {showBudgetPanel ? null : (
             <div
+              tabIndex="0"
               className="position-absolute top-50 translate-middle-y new-btn"
               onClick={toggleBudgetPanel}
             >
-              <div role="button" aria-label="add budget" className="btn">
-                <i className="fas fa-plus-square" />
-              </div>
+              <i className="fas fa-plus-square" />
             </div>
           )}
         </div>
