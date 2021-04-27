@@ -43,6 +43,7 @@ export default function Budget(props) {
     <div
       className="flex-container"
       style={{ height: "80vh", overflowY: "scroll" }}
+      tabIndex="0"
     >
       <div
         className="setBudgetButton flex-container mt-5"
