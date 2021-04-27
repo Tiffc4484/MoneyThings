@@ -125,6 +125,8 @@ export default function NewTransaction(props) {
             monthAriaLabel="new_month_select"
             nativeInputAriaLabel="new_input_select"
             yearAriaLabel="new_year_select"
+            autoFocus="true"
+            amPmAriaLabel="am/pm label"
           />
         </div>
         <div className="my-3">

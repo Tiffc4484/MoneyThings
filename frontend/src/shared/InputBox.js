@@ -18,7 +18,9 @@ export default function InputBox(props) {
 
   return (
     <div className="my-3">
-      <label className="form-label" htmlFor={id}>{props.label}</label>
+      <label className="form-label" htmlFor={id}>
+        {props.label}
+      </label>
       <input
         type={props.type === undefined ? "text" : props.type}
         className="form-control fs-5"
@@ -27,6 +29,7 @@ export default function InputBox(props) {
         onChange={props.onChange}
         placeholder={""}
         required={props.required || false}
+        min={0}
       />
       <div
         className={
