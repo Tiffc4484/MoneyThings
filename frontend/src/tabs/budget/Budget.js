@@ -42,7 +42,6 @@ export default function Budget(props) {
   return (
     <div
       className="flex-container"
-      aria-hidden="true"
       style={{ height: "80vh", overflowY: "scroll" }}
     >
       <div
@@ -55,7 +54,6 @@ export default function Budget(props) {
         <div
           className="text-center border-bottom py-3 position-relative"
           style={{
-            backgroundColor: "rgba(255,236,103, 0.3)",
             fontSize: "20px",
             fontWeight: "bold",
             fontFamily: "Halant serif",
