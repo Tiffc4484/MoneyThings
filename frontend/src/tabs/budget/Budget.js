@@ -52,7 +52,7 @@ export default function Budget(props) {
           <BarPanel barData={barData} />
         </div>
         <div
-          className="text-center border-bottom py-3 position-relative"
+          className="text-center border py-3 position-relative"
           style={{
             fontSize: "20px",
             fontWeight: "bold",
