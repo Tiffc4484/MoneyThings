@@ -24,7 +24,7 @@ export default function Workspace(props) {
   const [income, setIncome] = useState({});
   const [expense, setExpense] = useState({});
   const [dateGroup, setDateGroup] = useState({});
-  
+
   useEffect(() => {
     fetch("/transaction/recent", {
       method: "POST",
@@ -182,7 +182,7 @@ function FunctionalNavbar() {
           data-bs-toggle="modal"
           data-bs-target="#instruction_modal"
         >
-          <div tabIndex="0">
+          <div tabIndex="0" style={{ color: "#333" }}>
             <FontAwesomeIcon icon={["fas", "question"]} />
           </div>
         </div>

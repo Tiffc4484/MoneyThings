@@ -14,7 +14,7 @@ nav {
 
 body {
 	font-family: "Nunito Sans", sans-serif;
-	background-color: #f0f3f7;
+	background-color: #fff;
 }
 
 a {
@@ -47,34 +47,34 @@ a:hover {
 }
 
 .modal-dialog {
-  max-height: 80vw;
+	max-height: 80vw;
 	max-width: 50vw;
 }
 
 .btn-custom {
-  color: whitesmoke;
-  background-color: #323e4e;
-  border-color: #323e4e;
+	color: whitesmoke;
+	background-color: #323e4e;
+	border-color: #323e4e;
 }
 
 .btn-custom:hover {
-  color: white;
-  background-color: #526580;
-  border-color: #526580;
+	color: white;
+	background-color: #526580;
+	border-color: #526580;
 }
 
 .bg-info {
-  color: #402307;
+	color: #402307;
 }
 
 .bg-warning {
-  color: #545454;
+	color: #545454;
 }
 
 .bg-primary {
-  color: #141414;
+	color: #141414;
 }
 
 .bg-success {
-  color: #292929;
+	color: #292929;
 }
