@@ -78,3 +78,7 @@ a:hover {
 .bg-success {
 	color: #292929;
 }
+
+.table>:not(caption)>*>* {
+  background-color: transparent;
+}

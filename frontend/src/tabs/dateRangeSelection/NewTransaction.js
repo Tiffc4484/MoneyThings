@@ -68,7 +68,7 @@ export default function NewTransaction(props) {
       flag ? props.user.categories.Income : props.user.categories.Expense
     );
   }
-  
+
   function handleCategorySelection(evt) {
     if (evt.target.value !== "AddNewCategory_") {
       return setCategory(evt.target.value);
@@ -93,7 +93,10 @@ export default function NewTransaction(props) {
 
           <button
             className="col-3 border-end btn btn-secondary"
-            onClick={(evt) => {evt.preventDefault(); notIsIncome(true);}}
+            onClick={(evt) => {
+              evt.preventDefault();
+              notIsIncome(true);
+            }}
             style={{
               textDecoration: isIncome ? "underline" : "none",
             }}
@@ -102,7 +105,10 @@ export default function NewTransaction(props) {
           </button>
           <button
             className="col-3 border-end btn btn-secondary"
-            onClick={(evt) => {evt.preventDefault(); notIsIncome(false);}}
+            onClick={(evt) => {
+              evt.preventDefault();
+              notIsIncome(false);
+            }}
             style={{ textDecoration: isIncome ? "none" : "underline" }}
           >
             Expense
@@ -110,14 +116,28 @@ export default function NewTransaction(props) {
           <button className="col-3 btn btn-secondary">Save</button>
         </div>
         <div className="text-center my-3">
-          <DateTimePicker onChange={setDate} value={date} clearIcon={null} />
+          <DateTimePicker
+            onChange={setDate}
+            value={date}
+            clearIcon={null}
+            calendarAriaLabel="new_calendar_select"
+            dayAriaLabel="new_day_select"
+            monthAriaLabel="new_month_select"
+            nativeInputAriaLabel="new_input_select"
+            yearAriaLabel="new_year_select"
+          />
         </div>
-        <div className="form-floating my-3">
+        <div className="my-3">
+          <div>
+            <label className="form-label" htmlFor="select">
+              Category
+            </label>
+          </div>
           <select
-            className="form-select"
             id="select"
             value={category}
             onChange={handleCategorySelection}
+            style={{ width: "100%", height: "3rem" }}
           >
             {categories.map((item, index) => (
               <option value={item} key={"option-" + index}>
@@ -126,7 +146,6 @@ export default function NewTransaction(props) {
             ))}
             <option value="AddNewCategory_">... Add a new category</option>
           </select>
-          <label htmlFor="select">Category</label>
         </div>
         <InputBox
           label="Merchant name"
@@ -159,7 +178,7 @@ export default function NewTransaction(props) {
         data-bs-target="#new_category_modal"
         ref={modal_trigger}
       />
-      <CategoryWrapper user={props.user} refreshPage={props.refreshPage}/>
+      <CategoryWrapper user={props.user} refreshPage={props.refreshPage} />
     </div>
   );
 }
