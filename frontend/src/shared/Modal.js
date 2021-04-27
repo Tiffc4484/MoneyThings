@@ -16,7 +16,7 @@ export default function Modal(props) {
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title" id={props.id + "Title"}>
-              {props.title? props.title:""}
+              {props.title ? props.title : ""}
             </h5>
             <button
               type="button"
@@ -29,20 +29,13 @@ export default function Modal(props) {
           <div className="modal-footer">
             <button
               type="button"
-              className="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button
-              type="button"
               className="btn btn-custom"
               data-bs-dismiss="modal"
               onClick={() => {
                 props.dataHandler(data);
               }}
             >
-              Save changes
+              Close
             </button>
           </div>
         </div>
