@@ -31,9 +31,9 @@ export default function AllTime(props) {
     if (Object.keys(type).length === 0) return null;
     return (
       <div className="table table-striped">
-        <h3 className="text-end mb-3" style={{ color: "rgba(0,0,0,0.8)" }}>
+        <h2 className="text-end mb-3" style={{ color: "rgba(0,0,0,0.8)" }}>
           {header}
-        </h3>
+        </h2>
         <div className="accordion accordion-flush">
           {Object.keys(type).map((key) => (
             <div className="striped" key={"category-accordion-" + key}>
