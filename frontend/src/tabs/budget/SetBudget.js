@@ -46,7 +46,7 @@ export default function SetBudget(props) {
           <button className="col-3 btn btn-secondary" onClick={props.toggle}>
             Cancel
           </button>
-          <div className="col-6"/>
+          <div className="col-6" />
           <button
             className="col-3 btn btn-secondary"
             onClick={(evt) => {
@@ -58,14 +58,19 @@ export default function SetBudget(props) {
         </div>
       </form>
 
-      <div className="form-floating my-3">
+      <div className="my-3">
+        <div>
+          <label className="form-label" htmlFor="select">
+            Category
+          </label>
+        </div>
         <select
-          className="form-select"
           id="select"
           value={category}
           onChange={(evt) => {
             setCategory(evt.target.value);
           }}
+          style={{ width: "100%", height: "3rem" }}
         >
           {categories.map((item, index) => (
             <option value={item} key={"option-" + index}>
@@ -73,7 +78,6 @@ export default function SetBudget(props) {
             </option>
           ))}
         </select>
-        <label htmlFor="select">Category</label>
       </div>
 
       <InputBox

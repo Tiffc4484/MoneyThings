@@ -107,7 +107,6 @@ export default function RecentTransaction(props) {
               minDate={new Date(0)}
               maxDate={new Date()}
               calendarAriaLabel="calendar_icon"
-              autoFocus={true}
               required={true}
             />
           ) : (
@@ -121,7 +120,6 @@ export default function RecentTransaction(props) {
                 minDate={new Date(0)}
                 maxDate={new Date()}
                 calendarAriaLabel="calendar_icon"
-                autoFocus={true}
                 required={true}
               />
             </div>
