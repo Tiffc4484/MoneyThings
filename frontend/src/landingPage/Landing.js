@@ -53,9 +53,9 @@ export default function Landing(props) {
           <div className="container pt-3">
             <div className="row justify-content-center align-items-center">
               <div className="col-md-5">
-                <h2 style={{ fontWeight: 800 }}>
+                <h1 style={{ fontWeight: 800 }}>
                   Heart of Perfect Financial Planning
-                </h2>
+                </h1>
                 <p>
                   Let’s sort money affairs together, the more we get to know you
                   the more you can earn. We promise you a brand new financial
