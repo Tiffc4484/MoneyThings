@@ -2,9 +2,46 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../stylesheets/landing.css";
 import propTypes from "prop-types";
+import LandingInstruction from "./LandingInstruction";
 
 export default function Landing(props) {
   const link = props.user ? "/overview" : "/auth";
+
+  const url_array = [
+    "../images/instructions/0-balance.gif",
+    "../images/instructions/1-scroll.gif",
+    "../images/instructions/2-daterange.gif",
+    "../images/instructions/3-shortcut.gif",
+    "../images/instructions/4-add.gif",
+    "../images/instructions/5-group.gif",
+    "../images/instructions/6-charts.gif",
+    "../images/instructions/7-budget.gif",
+    "../images/instructions/8-profile.gif",
+  ];
+
+  const text_array = [
+    "Click the button to toggle visibility of your balance",
+    "Scroll into a sub-module to see more details",
+    "Choose a date range to fetch transactions",
+    "We also provide some shortcuts for date range selection",
+    "Click the right top Add Button to add a new transaction",
+    "Toggle between group by category/view by switching",
+    "We provide different types of visualization",
+    "Set your budget of current month",
+    "Manage your account information yourself",
+  ];
+
+  const tab_array = [
+    "Overview",
+    "Overview",
+    "All Time",
+    "All Time",
+    "All Time",
+    "All Time",
+    "Trends",
+    "Budget",
+    "Account",
+  ];
 
   return (
     <div
@@ -25,7 +62,9 @@ export default function Landing(props) {
                   attitude.
                 </p>
                 <Link to={link}>
-                  <button className="btn btn-lg btn-custom">Getting Started</button>
+                  <button className="btn btn-lg btn-custom">
+                    Getting Started
+                  </button>
                 </Link>
               </div>
               <div className="col-md-5 pt-3">
@@ -145,6 +184,24 @@ export default function Landing(props) {
                   <p>Set a goal and let us do the math for you</p>
                 </div>
               </div>
+            </div>
+            <div className="mt-5">
+              <h2
+                className="text-center mb-4"
+                style={{ fontWeight: 800, fontSize: "2.5rem" }}
+              >
+                Our Features
+              </h2>
+              {url_array.map((url, index) => (
+                <div key={index}>
+                  <LandingInstruction
+                    url={url_array[index]}
+                    text={text_array[index]}
+                    tab={tab_array[index]}
+                  />
+                  <hr />
+                </div>
+              ))}
             </div>
           </div>
         </div>
