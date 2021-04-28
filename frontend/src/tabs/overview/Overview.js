@@ -44,7 +44,7 @@ export default function Overview(props) {
         </div>
         <div className="col-6 p-3 module">
           <BudgetModule {...props} recent={recent} />
-        </div>
+        </div> 
       </div>
     </div>
   );
