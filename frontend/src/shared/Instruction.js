@@ -36,7 +36,7 @@ export default function Instruction() {
               delete them after you get used to MoneyThings.
             </div>
             <div className="fw-bold">Selection Panel</div>
-            <div className="mb-3">
+            <div className="mb-3"> 
               On the left side of any tab except the overview, there is the
               selection panel, in which there displays the recent transactions
               of given date range. And quick shortcuts are provided in the all
